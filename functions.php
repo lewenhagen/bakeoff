@@ -1,5 +1,16 @@
 <?php
 
+function initDB($db)
+{
+    $sql = "CREATE TABLE IF NOT EXISTS contestants ('id' INTEGER PRIMARY KEY  NOT NULL ,'name' VARCHAR,'haveBaked' INTEGER DEFAULT (0) )";
+    $sql2 = "CREATE TABLE IF NOT EXISTS bakeoffs ('id' INTEGER PRIMARY KEY  NOT NULL , 'name' VARCHAR, 'letter' VARCHAR, 'date' VARCHAR, 'baked' VARCHAR)";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+    $stmt2 = $db->prepare($sql2);
+    $stmt2->execute();
+}
+
 function insertPerson($db, $newPerson)
 {
     $sql = "INSERT INTO contestants (name) VALUES ('$newPerson')";

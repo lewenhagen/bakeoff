@@ -1,15 +1,17 @@
 <?php
 
+define(MYDB, "bake2.sqlite");
+
 function connect()
 {
-    $fileName = __DIR__ . "/db/bakeoff.sqlite";
+    $fileName = __DIR__ . "/db/" . MYDB;
+
     $dsn = "sqlite:$fileName";
 
     try {
         $db = new PDO($dsn);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
-        // echo "Failed to connect to the database using DSN:<br>$dsn<br>";
         throw $e;
     }
 

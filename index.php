@@ -2,7 +2,7 @@
 
 include("config.php");
 include("functions.php");
-
+$init = isset($_GET["init"]) ? $_GET["init"] : null;
 $addNewBaker = isset($_POST["newBaker"]) ? "yes" : null;
 $addNew = isset($_POST["newPerson"]) ? htmlentities($_POST["newPerson"]) : null;
 $removeBaker = isset($_GET["remove"]) ? $_GET["remove"] : null;
@@ -13,6 +13,10 @@ $buttonText = "Get new baker";
 $buttonClasses = "btn btn-lg btn-success";
 
 $db = connect();
+
+if ($init != null) {
+    initDB($db);
+}
 
 if ($addNewBaker != null) {
     global $buttonText;
