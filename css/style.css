@@ -1,0 +1,37 @@
+body {
+    font-family: Arial;
+    background-image: url("../img/top.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h2, label {
+    color: white;
+}
+
+.bakerButton {
+    float: right;
+    margin-top: -45px;
+}
+
+.jumbotron {
+    text-align: center;
+    color: white;
+    background-color: inherit;
+}
+th {
+    background-color: #aaa;
+    color: white;
+}
+
+td {
+    color: black;
+}
+
+.table {
+    background-color: #ccc;
+}
+
+.singleButton {
+    margin-bottom: 10px;
+}
