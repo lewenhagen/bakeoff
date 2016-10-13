@@ -1,1 +1,2 @@
-db/bakeoff.sqlite
+*.sqlite
+*.sqlite3
