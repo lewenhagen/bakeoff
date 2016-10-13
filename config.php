@@ -1,10 +1,11 @@
 <?php
 
-define(MYDB, "bake2.sqlite");
+$mydb = "bake.sqlite";
 
 function connect()
 {
-    $fileName = __DIR__ . "/db/" . MYDB;
+    global $mydb;
+    $fileName = __DIR__ . "/db/" . $mydb;
 
     $dsn = "sqlite:$fileName";
 
