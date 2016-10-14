@@ -3,6 +3,8 @@ body {
     background-image: url("../img/top.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 h2, label {

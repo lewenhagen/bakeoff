@@ -11,8 +11,12 @@ $bakerStuff = isset($_POST["bakerStuff"]) ? htmlentities($_POST["bakerStuff"]) :
 
 $buttonText = "Get new baker";
 $buttonClasses = "btn btn-lg btn-success";
-
-$db = connect();
+try {
+    $db = connect();
+} catch (Exception $e) { 
+    throw $e;
+    echo "chmod the db-folder to 777";
+}
 
 if ($init != null) {
     initDB($db);
