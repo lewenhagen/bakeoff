@@ -72,7 +72,7 @@ if ($editBaker != null && $bakerStuff != null) {
 
     <div class="row">
         <div class="jumbotron">
-            <h1>Webbprogramming Bakeoff</h1>
+            <h1>BTH Bakeoff</h1>
             <p></p>
         </div>
 
